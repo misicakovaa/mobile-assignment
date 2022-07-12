@@ -28,6 +28,7 @@ struct StageView: View {
                 HStack {
                     Text("\(stage) Stage")
                         .font(.headline)
+                        .foregroundColor(Color.ui.stagesColor)
                     
                     Spacer()
                 }
@@ -38,8 +39,10 @@ struct StageView: View {
                     
                     if reusable == true {
                         Text("reusable")
+                            .foregroundColor(Color.ui.stagesColor)
                     } else {
                         Text("not reusable")
+                            .foregroundColor(Color.ui.stagesColor)
                     }
                     
                     Spacer()
@@ -51,8 +54,10 @@ struct StageView: View {
                     
                     if engines == 1 {
                         Text("\(engines) engine")
+                            .foregroundColor(Color.ui.stagesColor)
                     } else {
                         Text("\(engines) engines")
+                            .foregroundColor(Color.ui.stagesColor)
                     }
                     
                     Spacer()
@@ -63,6 +68,7 @@ struct StageView: View {
                     Image("Fuel")
                     
                     Text("\(fuelTons) tons of fuel")
+                        .foregroundColor(Color.ui.stagesColor)
                     
                     Spacer()
                 }
@@ -73,6 +79,7 @@ struct StageView: View {
                     Image("Burn")
                     
                     Text("\(burnTime) seconds burn time")
+                        .foregroundColor(Color.ui.stagesColor)
                     
                     Spacer()
                 }

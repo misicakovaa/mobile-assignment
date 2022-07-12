@@ -15,5 +15,6 @@ extension Color {
         let rocketPink = Color("rocketPink")
         let lightGrayStage = Color("lightGrayStage")
         let lightGrayList = Color("lightGrayList")
+        let stagesColor = Color("stagesColor")
     }
 }
