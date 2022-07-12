@@ -30,36 +30,41 @@ struct RocketsListView: View {
         
         ZStack {
             NavigationView {
-                List(rocketsManager.rockets) { rocket in
+                ZStack {
+                    Color.ui.lightGrayList
                     
-                    //MARK: -  Rocket info item containing:
-                    // - image
-                    // - rocket name
-                    // - first flight
-                    
-                    NavigationLink(destination: RocketDetailView()) {
-                        HStack {
+                    List(rocketsManager.rockets) { rocket in
+                        
+                        //MARK: -  Rocket info item containing:
+                        // - image
+                        // - rocket name
+                        // - first flight
+                        
+                        NavigationLink(destination: RocketDetailView(rocket: rocket)) {
                             
-                            // Rocket image
-                            Image("Rocket")
-                                .padding(.trailing, 10)
-                            
-                            // Rocket name and first flight
-                            VStack (alignment: .leading) {
-                                Text(rocket.rocket_name)
-                                    .font(.headline)
+                            HStack {
+                                // Rocket image
+                                Image("Rocket")
+                                    .padding(.trailing, 10)
                                 
-                                let formattedFirstFlight = formateDateString(dateString: rocket.first_flight)
-                                
-                                Text("First flight: \(formattedFirstFlight)")
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
+                                // Rocket name and first flight
+                                VStack (alignment: .leading) {
+                                    Text(rocket.rocket_name)
+                                        .font(.headline)
+                                    
+                                    let formattedFirstFlight = formateDateString(dateString: rocket.first_flight)
+                                    
+                                    Text("First flight: \(formattedFirstFlight)")
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+                                }
                             }
+                            .padding([.top, .bottom], 10)
                         }
-                        .padding([.top, .bottom], 10)
                     }
+                    .navigationTitle("Rockets")
+                    
                 }
-                .navigationTitle("Rockets")
             }
         }
         .onAppear {

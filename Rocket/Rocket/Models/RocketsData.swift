@@ -22,6 +22,9 @@ struct Rocket: Identifiable, Decodable {
     // First Stage
     let first_stage: Stage
     let second_stage: Stage
+    
+    // Images
+    let flickr_images: [String]
 }
 
 //MARK: - Parameters
