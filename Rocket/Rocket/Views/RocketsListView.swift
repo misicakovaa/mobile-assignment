@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RocketsListView: View {
     
-    @ObservedObject var rocketsManager = RocketsManager()
+    @ObservedObject private var rocketsManager = RocketsManager()
     
     //MARK: - Formate dateString
     // - Formates dateString in format yyyy-MM-dd to d.M.yyyy
@@ -32,6 +32,7 @@ struct RocketsListView: View {
         ZStack {
             NavigationView {
                 ZStack {
+                    
                     Color.ui.lightGrayList
                     
                     List(rocketsManager.rockets) { rocket in
@@ -65,11 +66,14 @@ struct RocketsListView: View {
                     }
                     .navigationTitle("Rockets")
                     
+                    if rocketsManager.isLoading {
+                        ProgressView()
+                    }
                 }
             }
         }
-        .onAppear {
-            rocketsManager.fetchRockets()
+        .task {
+            await rocketsManager.fetchRockets()
         }
     }
 }

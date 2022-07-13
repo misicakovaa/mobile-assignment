@@ -10,35 +10,38 @@ import Foundation
 class RocketsManager: ObservableObject {
     
     @Published var rockets = [Rocket]()
+    @Published var isLoading = false
     
     //MARK: - Fetch rockets from spacexdata
     
-    func fetchRockets() {
+    func fetchRockets() async {
         let urlString = "https://api.spacexdata.com/v3/rockets"
-        performRequest(urlString: urlString)
+        await performRequest(urlString: urlString)
     }
     
     //MARK: - Perform request
     
-    func performRequest(urlString: String) {
+    @MainActor
+    func performRequest(urlString: String) async {
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
             
-            let task = session.dataTask(with: url) { data, response, error in
-                if error != nil {
-                    print(error!)
-                    return
-                }
-                
-                if let safeData = data {
-                    if let parsedRockets = self.parseJSON(rocketsData: safeData) {
-                        DispatchQueue.main.sync {
-                            self.rockets = parsedRockets
-                        }
+            isLoading = true
+            
+            Task {
+                do {
+                    let (data, _) = try await session.data(from: url)
+                    try await Task.sleep(nanoseconds: 2000_000_000) // TODO: delete
+                    
+                    if let parsedRockets = self.parseJSON(rocketsData: data) {
+                        isLoading = false
+                        self.rockets = parsedRockets
                     }
+                } catch {
+                    // handle error
+                    print(error)
                 }
             }
-            task.resume()
         }
     }
     

@@ -45,7 +45,6 @@ struct RocketLaunchView: View {
                         Image(systemName: "chevron.backward")
                         Text(rocketName)
                     }
-                    
                 }
             }
             
