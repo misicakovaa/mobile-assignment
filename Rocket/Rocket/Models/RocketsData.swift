@@ -28,6 +28,7 @@ struct Rocket: Identifiable, Decodable {
 }
 
 //MARK: - Parameters
+
 struct Height: Decodable {
     let meters: Double
 }
@@ -41,6 +42,7 @@ struct Mass: Decodable {
 }
 
 //MARK: - Stage
+
 struct Stage: Decodable {
     let reusable: Bool
     let engines: Int

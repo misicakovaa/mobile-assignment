@@ -14,6 +14,7 @@ struct RocketsListView: View {
     //MARK: - Formate dateString
     // - Formates dateString in format yyyy-MM-dd to d.M.yyyy
     // - Returns formatted dateString
+    
     func formateDateString (dateString: String) -> String {
         let inputDateFormatter = DateFormatter()
         
@@ -70,11 +71,5 @@ struct RocketsListView: View {
         .onAppear {
             rocketsManager.fetchRockets()
         }
-    }
-}
-
-struct RocketsListView_Previews: PreviewProvider {
-    static var previews: some View {
-        RocketsListView()
     }
 }

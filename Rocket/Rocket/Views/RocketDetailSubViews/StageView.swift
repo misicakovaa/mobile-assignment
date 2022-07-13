@@ -19,7 +19,7 @@ struct StageView: View {
     var body: some View {
         
         ZStack {
-            Color.ui.lightGrayStage
+            Color.ui.grayStageBackground
             
             VStack {
                 
@@ -34,10 +34,11 @@ struct StageView: View {
                 }
                 
                 //MARK: - Reusable
+                
                 HStack {
                     Image("Reusable")
                     
-                    if reusable == true {
+                    if reusable {
                         Text("reusable")
                             .foregroundColor(Color.ui.stagesColor)
                     } else {
@@ -49,6 +50,7 @@ struct StageView: View {
                 }
                 
                 //MARK: - Engine
+                
                 HStack {
                     Image("Engine")
                     
@@ -64,6 +66,7 @@ struct StageView: View {
                 }
                 
                 //MARK: - Fuel
+                
                 HStack {
                     Image("Fuel")
                     
@@ -86,13 +89,6 @@ struct StageView: View {
             }
             .padding()
         }
-        
         .cornerRadius(20)
-    }
-}
-
-struct StageView_Previews: PreviewProvider {
-    static var previews: some View {
-        StageView(stage: "First", reusable: true, engines: 2, fuelTons: 300, burnTime: 160)
     }
 }

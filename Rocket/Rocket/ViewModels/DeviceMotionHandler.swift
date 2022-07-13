@@ -10,49 +10,48 @@ import CoreMotion
 
 class DeviceMotionHandler : ObservableObject {
     
-    @Published var deviceRotationChanged = false
-    
     // True when x, y, z values are first data got from gyroscope
     var isFirstData = true
-    
-    var x = 0.0
-    var y = 0.0
-    var z = 0.0
-    
+    var pitch = 0.0
     let motionHandler = CMMotionManager()
     
+    @Published var deviceRotationChanged = false
+    
+    //MARK: - Start gyroscope
+    
     func startGyro() {
-        motionHandler.startGyroUpdates()
-        motionHandler.gyroUpdateInterval = 3
-        
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            if let gyroData = self.motionHandler.gyroData {
-                
-                let gyroX = round(gyroData.rotationRate.x*10)/10
-                let gyroY = round(gyroData.rotationRate.y*10)/10
-                let gyroZ = round(gyroData.rotationRate.z*10)/10
-                
-                // first data from gyroscope
-                if self.isFirstData {
-                    self.x = gyroX
-                    self.y = gyroY
-                    self.z = gyroZ
-                    self.isFirstData = false
-                }
-                
-                // check if new gyro data are different
-                if self.x != gyroX
-                    || self.y != gyroY
-                    || self.z != gyroZ {
-                    
+        motionHandler.startDeviceMotionUpdates(to: OperationQueue()) { [weak self] motion, error in
+            guard let self = self, let motion = motion else { return }
+            
+            let pitch = motion.attitude.pitch
+            
+            // First value from gyroscope
+            if self.isFirstData {
+                self.pitch = pitch
+                self.isFirstData = false
+            }
+            
+            //MARK: - Movement tolerance
+            
+            // Setting tolerance
+            let lowerBound = pitch - 0.5
+            let higherBound = pitch + 0.5
+            
+            // check if new gyroscope data are NOT within the tolerance
+            let tolerance = lowerBound...higherBound
+
+            if tolerance.contains(self.pitch) == false {
+                DispatchQueue.main.sync {
                     self.deviceRotationChanged = true
                 }
             }
         }
     }
     
+    //MARK: - Stop gyroscope
+    
     func stopGyro() {
-        motionHandler.stopGyroUpdates()
+        motionHandler.stopDeviceMotionUpdates()
         isFirstData = true
     }
 }

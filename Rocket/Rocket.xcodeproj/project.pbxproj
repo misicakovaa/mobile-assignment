@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F580E547287D998E00281572 /* RocketLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E546287D998E00281572 /* RocketLaunchView.swift */; };
 		F580E54B287DB1AE00281572 /* DeviceMotionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54A287DB1AE00281572 /* DeviceMotionHandler.swift */; };
+		F580E54D287EC8E500281572 /* ParametersSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54C287EC8E500281572 /* ParametersSectionView.swift */; };
+		F580E54F287EC99F00281572 /* OverviewSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54E287EC99F00281572 /* OverviewSectionView.swift */; };
+		F580E551287EC9EA00281572 /* PhotosSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E550287EC9EA00281572 /* PhotosSectionView.swift */; };
 		F5DBA073287D74F3002B87D0 /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA072287D74F2002B87D0 /* ParameterView.swift */; };
 		F5DBA075287D77CB002B87D0 /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA074287D77CB002B87D0 /* ColorData.swift */; };
 		F5DBA077287D7C55002B87D0 /* StageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA076287D7C55002B87D0 /* StageView.swift */; };
@@ -24,6 +27,9 @@
 /* Begin PBXFileReference section */
 		F580E546287D998E00281572 /* RocketLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchView.swift; sourceTree = "<group>"; };
 		F580E54A287DB1AE00281572 /* DeviceMotionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionHandler.swift; sourceTree = "<group>"; };
+		F580E54C287EC8E500281572 /* ParametersSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersSectionView.swift; sourceTree = "<group>"; };
+		F580E54E287EC99F00281572 /* OverviewSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewSectionView.swift; sourceTree = "<group>"; };
+		F580E550287EC9EA00281572 /* PhotosSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosSectionView.swift; sourceTree = "<group>"; };
 		F5DBA072287D74F2002B87D0 /* ParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		F5DBA074287D77CB002B87D0 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
 		F5DBA076287D7C55002B87D0 /* StageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageView.swift; sourceTree = "<group>"; };
@@ -48,6 +54,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F580E552287ECA5500281572 /* RocketDetailSubViews */ = {
+			isa = PBXGroup;
+			children = (
+				F580E550287EC9EA00281572 /* PhotosSectionView.swift */,
+				F580E54E287EC99F00281572 /* OverviewSectionView.swift */,
+				F580E54C287EC8E500281572 /* ParametersSectionView.swift */,
+				F5DBA072287D74F2002B87D0 /* ParameterView.swift */,
+				F5DBA076287D7C55002B87D0 /* StageView.swift */,
+			);
+			path = RocketDetailSubViews;
+			sourceTree = "<group>";
+		};
 		F5EF80B2287C743E0060FDC0 = {
 			isa = PBXGroup;
 			children = (
@@ -90,8 +108,7 @@
 			children = (
 				F5EF80C0287C743E0060FDC0 /* RocketsListView.swift */,
 				F5EF80D4287CBE430060FDC0 /* RocketDetailView.swift */,
-				F5DBA072287D74F2002B87D0 /* ParameterView.swift */,
-				F5DBA076287D7C55002B87D0 /* StageView.swift */,
+				F580E552287ECA5500281572 /* RocketDetailSubViews */,
 				F580E546287D998E00281572 /* RocketLaunchView.swift */,
 			);
 			path = Views;
@@ -187,6 +204,7 @@
 			files = (
 				F5EF80D1287C7C950060FDC0 /* RocketsData.swift in Sources */,
 				F5DBA077287D7C55002B87D0 /* StageView.swift in Sources */,
+				F580E551287EC9EA00281572 /* PhotosSectionView.swift in Sources */,
 				F5EF80D3287C7DA30060FDC0 /* RocketsManager.swift in Sources */,
 				F580E547287D998E00281572 /* RocketLaunchView.swift in Sources */,
 				F580E54B287DB1AE00281572 /* DeviceMotionHandler.swift in Sources */,
@@ -195,6 +213,8 @@
 				F5EF80C1287C743E0060FDC0 /* RocketsListView.swift in Sources */,
 				F5DBA073287D74F3002B87D0 /* ParameterView.swift in Sources */,
 				F5EF80BF287C743E0060FDC0 /* RocketApp.swift in Sources */,
+				F580E54D287EC8E500281572 /* ParametersSectionView.swift in Sources */,
+				F580E54F287EC99F00281572 /* OverviewSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

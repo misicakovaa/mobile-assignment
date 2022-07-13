@@ -13,7 +13,7 @@ extension Color {
     
     struct UI {
         let rocketPink = Color("rocketPink")
-        let lightGrayStage = Color("lightGrayStage")
+        let grayStageBackground = Color("grayStage")
         let lightGrayList = Color("lightGrayList")
         let stagesColor = Color("stagesColor")
     }
