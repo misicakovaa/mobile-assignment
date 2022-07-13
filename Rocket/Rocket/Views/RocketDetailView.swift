@@ -52,7 +52,7 @@ struct RocketDetailView: View {
             
             // Launch button
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink(destination: RocketLaunchView()) {
+                NavigationLink(destination: RocketLaunchView(rocketName: rocket.rocket_name)) {
                     Text("Launch")
                         .fontWeight(.bold)
                 }

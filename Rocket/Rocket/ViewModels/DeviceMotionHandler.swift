@@ -54,4 +54,12 @@ class DeviceMotionHandler : ObservableObject {
         motionHandler.stopDeviceMotionUpdates()
         isFirstData = true
     }
+    
+    //MARK: - Reset handler
+    
+    func resetHandler() {
+        isFirstData = true
+        deviceRotationChanged = false
+        stopGyro()
+    }
 }
