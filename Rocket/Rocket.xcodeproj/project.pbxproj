@@ -12,6 +12,7 @@
 		F580E54D287EC8E500281572 /* ParametersSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54C287EC8E500281572 /* ParametersSectionView.swift */; };
 		F580E54F287EC99F00281572 /* OverviewSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54E287EC99F00281572 /* OverviewSectionView.swift */; };
 		F580E551287EC9EA00281572 /* PhotosSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E550287EC9EA00281572 /* PhotosSectionView.swift */; };
+		F5D0523E2885993F00A24021 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5D052402885993F00A24021 /* Localizable.strings */; };
 		F5DBA073287D74F3002B87D0 /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA072287D74F2002B87D0 /* ParameterView.swift */; };
 		F5DBA075287D77CB002B87D0 /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA074287D77CB002B87D0 /* ColorData.swift */; };
 		F5DBA077287D7C55002B87D0 /* StageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA076287D7C55002B87D0 /* StageView.swift */; };
@@ -30,6 +31,8 @@
 		F580E54C287EC8E500281572 /* ParametersSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersSectionView.swift; sourceTree = "<group>"; };
 		F580E54E287EC99F00281572 /* OverviewSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewSectionView.swift; sourceTree = "<group>"; };
 		F580E550287EC9EA00281572 /* PhotosSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosSectionView.swift; sourceTree = "<group>"; };
+		F5D052412885999500A24021 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5D052462885A51400A24021 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F5DBA072287D74F2002B87D0 /* ParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		F5DBA074287D77CB002B87D0 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
 		F5DBA076287D7C55002B87D0 /* StageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageView.swift; sourceTree = "<group>"; };
@@ -66,6 +69,14 @@
 			path = RocketDetailSubViews;
 			sourceTree = "<group>";
 		};
+		F5D0523B2885981300A24021 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				F5D052402885993F00A24021 /* Localizable.strings */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		F5EF80B2287C743E0060FDC0 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +96,7 @@
 		F5EF80BD287C743E0060FDC0 /* Rocket */ = {
 			isa = PBXGroup;
 			children = (
+				F5D0523B2885981300A24021 /* Supporting */,
 				F5EF80BE287C743E0060FDC0 /* RocketApp.swift */,
 				F5EF80CC287C7C220060FDC0 /* Views */,
 				F5EF80CF287C7C630060FDC0 /* ViewModels */,
@@ -174,6 +186,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = F5EF80B2287C743E0060FDC0;
 			productRefGroup = F5EF80BC287C743E0060FDC0 /* Products */;
@@ -191,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5EF80C6287C74430060FDC0 /* Preview Assets.xcassets in Resources */,
+				F5D0523E2885993F00A24021 /* Localizable.strings in Resources */,
 				F5EF80C3287C74430060FDC0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,11 +234,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		F5D052402885993F00A24021 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5D052412885999500A24021 /* cs */,
+				F5D052462885A51400A24021 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		F5EF80C7287C74430060FDC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -285,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

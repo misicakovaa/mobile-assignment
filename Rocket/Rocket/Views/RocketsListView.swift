@@ -55,7 +55,7 @@ struct RocketsListView: View {
                                 
                                 let formattedFirstFlight = formateDateString(dateString: rocket.first_flight)
                                 
-                                Text("First flight: \(formattedFirstFlight)")
+                                Text("FirstFlight: \(formattedFirstFlight)")
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
                             }
