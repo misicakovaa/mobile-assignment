@@ -21,17 +21,14 @@ struct StageView: View {
         ZStack {
             Color.ui.grayStageBackground
             
-            VStack {
+            VStack(alignment: .leading) {
                 
                 //MARK: - Stage title
                 
-                HStack {
-                    Text("\(stage) Stage")
-                        .font(.headline)
-                        .foregroundColor(Color.ui.stagesColor)
-                    
-                    Spacer()
-                }
+                Text("\(stage) Stage")
+                    .font(.headline)
+                    .foregroundColor(Color.ui.stagesColor)
+                
                 
                 //MARK: - Reusable
                 

@@ -14,16 +14,13 @@ struct ParametersSectionView: View {
     let mass: Int
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             
             // Parameters title
-            HStack {
-                Text("Parameters")
-                    .font(.headline)
-                    .padding(.leading)
-                
-                Spacer()
-            }
+            Text("Parameters")
+                .font(.headline)
+                .padding(.leading)
+            
             
             // Parameters info
             HStack {

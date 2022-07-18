@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RocketsListView: View {
     
-    @ObservedObject private var rocketsManager = RocketsManager()
+    @StateObject private var rocketsManager = RocketsManager()
     
     //MARK: - Formate dateString
     // - Formates dateString in format yyyy-MM-dd to d.M.yyyy
@@ -29,49 +29,48 @@ struct RocketsListView: View {
     
     var body: some View {
         
-        ZStack {
-            NavigationView {
-                ZStack {
+        NavigationView {
+            ZStack {
+                
+                Color.ui.lightGrayList
+                
+                List(rocketsManager.rockets) { rocket in
                     
-                    Color.ui.lightGrayList
+                    //MARK: -  Rocket info item containing:
+                    // - image
+                    // - rocket name
+                    // - first flight
                     
-                    List(rocketsManager.rockets) { rocket in
+                    NavigationLink(destination: RocketDetailView(rocket: rocket)) {
                         
-                        //MARK: -  Rocket info item containing:
-                        // - image
-                        // - rocket name
-                        // - first flight
-                        
-                        NavigationLink(destination: RocketDetailView(rocket: rocket)) {
+                        HStack {
+                            // Rocket image
+                            Image("Rocket")
+                                .padding(.trailing, 10)
                             
-                            HStack {
-                                // Rocket image
-                                Image("Rocket")
-                                    .padding(.trailing, 10)
+                            // Rocket name and first flight
+                            VStack (alignment: .leading) {
+                                Text(rocket.rocket_name)
+                                    .font(.headline)
                                 
-                                // Rocket name and first flight
-                                VStack (alignment: .leading) {
-                                    Text(rocket.rocket_name)
-                                        .font(.headline)
-                                    
-                                    let formattedFirstFlight = formateDateString(dateString: rocket.first_flight)
-                                    
-                                    Text("First flight: \(formattedFirstFlight)")
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
-                                }
+                                let formattedFirstFlight = formateDateString(dateString: rocket.first_flight)
+                                
+                                Text("First flight: \(formattedFirstFlight)")
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
                             }
-                            .padding([.top, .bottom], 10)
                         }
+                        .padding([.top, .bottom], 10)
                     }
-                    .navigationTitle("Rockets")
-                    
-                    if rocketsManager.isLoading {
-                        ProgressView()
-                    }
+                }
+                .navigationTitle("Rockets")
+                
+                if rocketsManager.isLoading {
+                    ProgressView()
                 }
             }
         }
+        
         .task {
             await rocketsManager.fetchRockets()
         }

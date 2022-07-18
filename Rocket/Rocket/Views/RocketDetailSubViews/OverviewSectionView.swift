@@ -12,15 +12,11 @@ struct OverviewSectionView: View {
     let description: String
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             // Overview title
-            HStack {
-                Text("Overview")
-                    .font(.headline)
-                    .padding()
-                
-                Spacer()
-            }
+            Text("Overview")
+                .font(.headline)
+                .padding()
             
             // Overview description
             Text(description)
