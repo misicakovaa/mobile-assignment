@@ -9,8 +9,8 @@ import Foundation
 
 struct Rocket: Identifiable, Decodable {
     let id: Int
-    let rocket_name: String
-    let first_flight: String
+    let rocketName: String
+    let firstFlight: String
     let description: String
     
     
@@ -20,11 +20,25 @@ struct Rocket: Identifiable, Decodable {
     let mass: Mass
     
     // First Stage
-    let first_stage: Stage
-    let second_stage: Stage
+    let firstStage: Stage
+    let secondStage: Stage
     
     // Images
-    let flickr_images: [String]
+    let flickrImages: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case rocketName = "rocket_name"
+        case firstFlight = "first_flight"
+        case firstStage = "first_stage"
+        case secondStage = "second_stage"
+        case flickrImages = "flickr_images"
+        
+        case id
+        case description
+        case height
+        case diameter
+        case mass
+    }
 }
 
 //MARK: - Parameters
@@ -46,7 +60,15 @@ struct Mass: Decodable {
 struct Stage: Decodable {
     let reusable: Bool
     let engines: Int
-    let fuel_amount_tons: Double
-    let burn_time_sec: Int?
+    let fuel: Double
+    let burnTime: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case burnTime = "burn_time_sec"
+        case fuel = "fuel_amount_tons"
+        
+        case reusable
+        case engines
+    }
 }
 

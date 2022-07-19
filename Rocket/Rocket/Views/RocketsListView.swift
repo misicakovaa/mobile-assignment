@@ -50,10 +50,10 @@ struct RocketsListView: View {
                             
                             // Rocket name and first flight
                             VStack (alignment: .leading) {
-                                Text(rocket.rocket_name)
+                                Text(rocket.rocketName)
                                     .font(.headline)
                                 
-                                let formattedFirstFlight = formateDateString(dateString: rocket.first_flight)
+                                let formattedFirstFlight = formateDateString(dateString: rocket.firstFlight)
                                 
                                 Text("FirstFlight: \(formattedFirstFlight)")
                                     .font(.subheadline)
