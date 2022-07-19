@@ -24,3 +24,9 @@ struct OverviewSectionView: View {
         }
     }
 }
+
+struct OverviewSectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        OverviewSectionView(description: "Bablablablaabla")
+    }
+}

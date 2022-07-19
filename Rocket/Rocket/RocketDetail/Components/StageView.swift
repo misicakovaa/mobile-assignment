@@ -10,7 +10,6 @@ import SwiftUI
 struct StageView: View {
     
     let stage: String
-    
     let reusable: Bool
     let engines: Int
     let fuelTons: Int

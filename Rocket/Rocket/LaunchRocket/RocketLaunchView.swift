@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct RocketLaunchView: View {
+    
     @Environment(\.presentationMode) var presentationMode
     
     let rocketName: String
+    
     @ObservedObject var motionHandler = DeviceMotionHandler()
     
     var body: some View {

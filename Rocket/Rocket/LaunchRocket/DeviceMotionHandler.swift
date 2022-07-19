@@ -11,9 +11,9 @@ import CoreMotion
 class DeviceMotionHandler : ObservableObject {
     
     // True when x, y, z values are first data got from gyroscope
-    var isFirstData = true
-    var pitch = 0.0
-    let motionHandler = CMMotionManager()
+    private var isFirstData = true
+    private var pitch = 0.0
+    private let motionHandler = CMMotionManager()
     
     @Published var deviceRotationChanged = false
     
@@ -39,7 +39,7 @@ class DeviceMotionHandler : ObservableObject {
             
             // check if new gyroscope data are NOT within the tolerance
             let tolerance = lowerBound...higherBound
-
+            
             if tolerance.contains(self.pitch) == false {
                 DispatchQueue.main.sync {
                     self.deviceRotationChanged = true

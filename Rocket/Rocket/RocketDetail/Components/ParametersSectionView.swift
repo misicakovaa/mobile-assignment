@@ -24,16 +24,25 @@ struct ParametersSectionView: View {
             
             // Parameters info
             HStack {
-                ParameterView(name: "height", number: Int(height), unit: "m")
+                ParameterView(
+                    name: "height",
+                    number: Int(height),
+                    unit: "m")
                     .padding(.leading)
                 
                 Spacer()
                 
-                ParameterView(name: "diameter", number: Int(diameter), unit: "m")
+                ParameterView(
+                    name: "diameter",
+                    number: Int(diameter),
+                    unit: "m")
                 
                 Spacer()
                 
-                ParameterView(name: "mass", number: mass/1000, unit: "t")
+                ParameterView(
+                    name: "mass",
+                    number: mass/1000,
+                    unit: "t")
                     .padding(.trailing)
             }
         }

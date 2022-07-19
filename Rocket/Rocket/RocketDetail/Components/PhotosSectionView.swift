@@ -18,7 +18,6 @@ struct PhotosSectionView: View {
                 .font(.headline)
                 .padding(.leading)
             
-            
             // Images
             if let safeImages = images {
                 ForEach(safeImages, id: \.self) { image in
