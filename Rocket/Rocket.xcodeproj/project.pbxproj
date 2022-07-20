@@ -20,6 +20,7 @@
 		F5E7C28E2887F2350097715D /* TitledSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7C28D2887F2350097715D /* TitledSection.swift */; };
 		F5E7C2902887FBB10097715D /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7C28F2887FBB10097715D /* ImageExtension.swift */; };
 		F5E7C2922887FDF60097715D /* StageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7C2912887FDF60097715D /* StageRow.swift */; };
+		F5E7C2962888489E0097715D /* RocketsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7C2952888489E0097715D /* RocketsFetcher.swift */; };
 		F5EF80BF287C743E0060FDC0 /* RocketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EF80BE287C743E0060FDC0 /* RocketApp.swift */; };
 		F5EF80C1287C743E0060FDC0 /* RocketsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EF80C0287C743E0060FDC0 /* RocketsListView.swift */; };
 		F5EF80C3287C74430060FDC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5EF80C2287C74430060FDC0 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		F5E7C28D2887F2350097715D /* TitledSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledSection.swift; sourceTree = "<group>"; };
 		F5E7C28F2887FBB10097715D /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		F5E7C2912887FDF60097715D /* StageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageRow.swift; sourceTree = "<group>"; };
+		F5E7C2952888489E0097715D /* RocketsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsFetcher.swift; sourceTree = "<group>"; };
 		F5EF80BB287C743E0060FDC0 /* Rocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5EF80BE287C743E0060FDC0 /* RocketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketApp.swift; sourceTree = "<group>"; };
 		F5EF80C0287C743E0060FDC0 /* RocketsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				F5EF80D2287C7DA30060FDC0 /* RocketsManager.swift */,
+				F5E7C2952888489E0097715D /* RocketsFetcher.swift */,
 				F5EF80D0287C7C950060FDC0 /* RocketsData.swift */,
 			);
 			path = Networking;
@@ -261,6 +264,7 @@
 				F5E7C2922887FDF60097715D /* StageRow.swift in Sources */,
 				F580E54D287EC8E500281572 /* ParametersSectionView.swift in Sources */,
 				F515AEED2886C17D00A8007B /* RocketRow.swift in Sources */,
+				F5E7C2962888489E0097715D /* RocketsFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
