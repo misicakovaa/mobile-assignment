@@ -13,10 +13,6 @@ struct PhotosSectionView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            // Photos title
-            Text("Photos")
-                .font(.headline)
-                .padding(.leading)
             
             // Images
             if let safeImages = images {

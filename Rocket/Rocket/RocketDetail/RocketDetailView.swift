@@ -17,16 +17,21 @@ struct RocketDetailView: View {
             
             //MARK: - Overview section
             
-            OverviewSectionView(description: rocket.description)
-                .padding(.bottom)
+            TitledSection(title: "Overview") {
+                Text(rocket.description)
+                    .padding([.leading, .trailing])
+            }
             
             //MARK: - Parameters section
             
-            ParametersSectionView(
-                height: rocket.height.meters,
-                diameter: rocket.diameter.meters,
-                mass: rocket.mass.kg)
+            TitledSection(title: "Parameters") {
+                
+                ParametersSectionView(
+                    height: rocket.height.meters,
+                    diameter: rocket.diameter.meters,
+                    mass: rocket.mass.kg)
                 .padding(.bottom)
+            }
             
             //MARK: - First Stage section
             
@@ -36,7 +41,8 @@ struct RocketDetailView: View {
                 engines: rocket.firstStage.engines,
                 fuelTons: Int(rocket.firstStage.fuel),
                 burnTime: rocket.firstStage.burnTime ?? 0)
-                .padding([.leading, .trailing, .bottom])
+            .padding([.leading, .trailing, .bottom])
+            
             
             
             //MARK: - Second Stage section
@@ -47,12 +53,15 @@ struct RocketDetailView: View {
                 engines: rocket.secondStage.engines,
                 fuelTons: Int(rocket.firstStage.fuel),
                 burnTime: rocket.secondStage.burnTime ?? 0)
-                .padding([.leading, .trailing, .bottom])
+            .padding([.leading, .trailing, .bottom])
+            
             
             
             //MARK: - Photos section
             
-            PhotosSectionView(images: rocket.flickrImages)
+            TitledSection(title: "Photos") {
+                PhotosSectionView(images: rocket.flickrImages)
+            }
         }
         .navigationTitle(rocket.rocketName)
         .navigationBarTitleDisplayMode(.inline)

@@ -16,12 +16,6 @@ struct ParametersSectionView: View {
     var body: some View {
         VStack(alignment: .leading) {
             
-            // Parameters title
-            Text("Parameters")
-                .font(.headline)
-                .padding(.leading)
-            
-            
             // Parameters info
             HStack {
                 ParameterView(
