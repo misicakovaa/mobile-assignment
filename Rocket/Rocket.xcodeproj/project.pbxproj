@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F515AEED2886C17D00A8007B /* RocketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515AEEC2886C17D00A8007B /* RocketRow.swift */; };
 		F515AEF02886C2ED00A8007B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515AEEF2886C2ED00A8007B /* StringExtension.swift */; };
-		F515AEF42886E10200A8007B /* RocketsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515AEF32886E10200A8007B /* RocketsFetcher.swift */; };
 		F580E547287D998E00281572 /* RocketLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E546287D998E00281572 /* RocketLaunchView.swift */; };
 		F580E54B287DB1AE00281572 /* DeviceMotionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54A287DB1AE00281572 /* DeviceMotionHandler.swift */; };
 		F580E54D287EC8E500281572 /* ParametersSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54C287EC8E500281572 /* ParametersSectionView.swift */; };
@@ -33,7 +32,6 @@
 /* Begin PBXFileReference section */
 		F515AEEC2886C17D00A8007B /* RocketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRow.swift; sourceTree = "<group>"; };
 		F515AEEF2886C2ED00A8007B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		F515AEF32886E10200A8007B /* RocketsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsFetcher.swift; sourceTree = "<group>"; };
 		F580E546287D998E00281572 /* RocketLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchView.swift; sourceTree = "<group>"; };
 		F580E54A287DB1AE00281572 /* DeviceMotionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionHandler.swift; sourceTree = "<group>"; };
 		F580E54C287EC8E500281572 /* ParametersSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersSectionView.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				F5EF80D2287C7DA30060FDC0 /* RocketsManager.swift */,
-				F515AEF32886E10200A8007B /* RocketsFetcher.swift */,
 				F5EF80D0287C7C950060FDC0 /* RocketsData.swift */,
 			);
 			path = Networking;
@@ -260,7 +257,6 @@
 				F5DBA073287D74F3002B87D0 /* ParameterView.swift in Sources */,
 				F5E7C28E2887F2350097715D /* TitledSection.swift in Sources */,
 				F515AEF02886C2ED00A8007B /* StringExtension.swift in Sources */,
-				F515AEF42886E10200A8007B /* RocketsFetcher.swift in Sources */,
 				F5EF80BF287C743E0060FDC0 /* RocketApp.swift in Sources */,
 				F5E7C2922887FDF60097715D /* StageRow.swift in Sources */,
 				F580E54D287EC8E500281572 /* ParametersSectionView.swift in Sources */,
