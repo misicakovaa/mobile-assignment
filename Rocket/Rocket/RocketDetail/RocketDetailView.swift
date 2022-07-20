@@ -43,8 +43,6 @@ struct RocketDetailView: View {
                 burnTime: rocket.firstStage.burnTime ?? 0)
             .padding([.leading, .trailing, .bottom])
             
-            
-            
             //MARK: - Second Stage section
             
             StageView(
@@ -54,8 +52,6 @@ struct RocketDetailView: View {
                 fuelTons: Int(rocket.firstStage.fuel),
                 burnTime: rocket.secondStage.burnTime ?? 0)
             .padding([.leading, .trailing, .bottom])
-            
-            
             
             //MARK: - Photos section
             

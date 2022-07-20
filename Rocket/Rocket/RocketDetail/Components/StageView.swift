@@ -20,68 +20,25 @@ struct StageView: View {
         ZStack {
             Color.ui.grayStageBackground
             
-            VStack(alignment: .leading) {
+            TitledSection(title: "\(stage) Stage") {
                 
-                //MARK: - Stage title
-                
-                Text("\(stage) Stage")
-                    .font(.headline)
-                    .foregroundColor(Color.ui.stagesColor)
-                
-                
-                //MARK: - Reusable
-                
-                HStack {
-                    Image.ui.reusable
+                VStack{
+                    StageRow(
+                        image: Image.ui.reusable,
+                        text: reusable ? "reusable" : "not reusable")
                     
-                    if reusable {
-                        Text("reusable")
-                            .foregroundColor(Color.ui.stagesColor)
-                    } else {
-                        Text("not reusable")
-                            .foregroundColor(Color.ui.stagesColor)
-                    }
+                    StageRow(
+                        image: Image.ui.engine,
+                        text: engines == 1 ? "\(engines) engine" : "\(engines) engines")
                     
-                    Spacer()
-                }
-                
-                //MARK: - Engine
-                
-                HStack {
-                    Image.ui.engine
+                    StageRow(
+                        image: Image.ui.fuel,
+                        text: "\(fuelTons) tons of fuel")
                     
-                    if engines == 1 {
-                        Text("\(engines) engine")
-                            .foregroundColor(Color.ui.stagesColor)
-                    } else {
-                        Text("\(engines) engines")
-                            .foregroundColor(Color.ui.stagesColor)
-                    }
-                    
-                    Spacer()
-                }
-                
-                //MARK: - Fuel
-                
-                HStack {
-                    Image.ui.fuel
-                    
-                    Text("\(fuelTons) tons of fuel")
-                        .foregroundColor(Color.ui.stagesColor)
-                    
-                    Spacer()
-                }
-                
-                //MARK: - Burn
-                
-                HStack {
-                    Image.ui.burn
-                    
-                    Text("\(burnTime) seconds burn time")
-                        .foregroundColor(Color.ui.stagesColor)
-                    
-                    Spacer()
-                }
+                    StageRow(
+                        image: Image.ui.burn,
+                        text: "\(burnTime) seconds burn time")
+                }.padding(.bottom)
             }
             .padding()
         }
