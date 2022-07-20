@@ -27,11 +27,11 @@ struct Rocket: Identifiable, Decodable {
     let flickrImages: [String]
     
     enum CodingKeys: String, CodingKey {
-        case rocketName = "rocket_name"
-        case firstFlight = "first_flight"
-        case firstStage = "first_stage"
-        case secondStage = "second_stage"
-        case flickrImages = "flickr_images"
+        case rocketName     = "rocket_name"
+        case firstFlight    = "first_flight"
+        case firstStage     = "first_stage"
+        case secondStage    = "second_stage"
+        case flickrImages   = "flickr_images"
         
         case id
         case description
@@ -64,8 +64,8 @@ struct Stage: Decodable {
     let burnTime: Int?
     
     enum CodingKeys: String, CodingKey {
-        case burnTime = "burn_time_sec"
-        case fuel = "fuel_amount_tons"
+        case burnTime   = "burn_time_sec"
+        case fuel       = "fuel_amount_tons"
         
         case reusable
         case engines

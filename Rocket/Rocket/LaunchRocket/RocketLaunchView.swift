@@ -19,13 +19,14 @@ struct RocketLaunchView: View {
         VStack {
             // Launch rocket - change image & text
             if motionHandler.deviceRotationChanged {
-                Image("Rocket Flying")
+                Image.ui.flyingRocket
                     .offset(y: -UIScreen.main.bounds.height)
                     .transition(.scale.animation(.default.speed(0.1)))
                 
                 Text("Launch successfull!")
             } else {
-                Image("Rocket Idle")
+                Image.ui.idleRocket
+                
                 Text("Move your phone up \nto launch the rocket")
             }
         }

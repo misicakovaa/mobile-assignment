@@ -15,7 +15,7 @@ struct RocketRow: View {
     var body: some View {
         HStack {
             // Rocket image
-            Image("Rocket")
+            Image.ui.rocket
                 .padding(.trailing, 10)
             
             // Rocket name and first flight

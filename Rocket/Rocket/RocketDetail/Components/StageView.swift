@@ -32,7 +32,7 @@ struct StageView: View {
                 //MARK: - Reusable
                 
                 HStack {
-                    Image("Reusable")
+                    Image.ui.reusable
                     
                     if reusable {
                         Text("reusable")
@@ -48,7 +48,7 @@ struct StageView: View {
                 //MARK: - Engine
                 
                 HStack {
-                    Image("Engine")
+                    Image.ui.engine
                     
                     if engines == 1 {
                         Text("\(engines) engine")
@@ -64,7 +64,7 @@ struct StageView: View {
                 //MARK: - Fuel
                 
                 HStack {
-                    Image("Fuel")
+                    Image.ui.fuel
                     
                     Text("\(fuelTons) tons of fuel")
                         .foregroundColor(Color.ui.stagesColor)
@@ -75,7 +75,7 @@ struct StageView: View {
                 //MARK: - Burn
                 
                 HStack {
-                    Image("Burn")
+                    Image.ui.burn
                     
                     Text("\(burnTime) seconds burn time")
                         .foregroundColor(Color.ui.stagesColor)

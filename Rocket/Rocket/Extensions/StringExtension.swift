@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  StringExtension.swift
 //  Rocket
 //
 //  Created by Adela Mišicáková on 19.07.2022.
