@@ -10,30 +10,20 @@ import Combine
 
 class RocketsManager: ObservableObject {
     
-    @Published var rockets = [Rocket]()
-    @Published var isLoading = true
-    
-    let rocketFetcher = RocketsFetcher()
-    var cancellables = Set<AnyCancellable>()
+    let apiService = ApiService()
     
     //MARK: - Fetch rockets from spacexdata
     
-    func fetchRockets() async {
-        guard let url = URL(string: "https://api.spacexdata.com/v3/rockets") else {return}
+    func fetchRockets() async throws -> [Rocket] {
         
-        await rocketFetcher.getRockets(url: url)
-        
-        rocketFetcher.$rockets
-            .sink(receiveValue: { [weak self] returnedRockets in
-                self?.rockets = returnedRockets
-            })
-            .store(in: &cancellables)
-        
-//        do {
-//            sleep(2)
-//        }
-        
-        isLoading = false
+        let url = URL(string: "https://api.spacexdata.com/v3/rockets")!
+        return try await apiService.getData(for: url)
+    }
+    
+    //MARK: - Fetch Rocket detail from spacexdata
+    
+    func fetchRocketDetail(rocketName: String) async throws -> Rocket {
+        let url = URL(string: "https://api.spacexdata.com/v3/rockets/\(rocketName)")!
+        return try await apiService.getData(for: url)
     }
 }
-

@@ -9,39 +9,64 @@ import SwiftUI
 
 struct RocketsListView: View {
     
-    @StateObject private var rocketsManager = RocketsManager()
+    @StateObject private var vm = RocketsViewModel()
     
     var body: some View {
         
         NavigationView {
             
-            ZStack {
+            switch vm.state {
+            case .success(let rockets):
                 
-                Color.ui.lightGrayList
-                
-                List(rocketsManager.rockets) { rocket in
+                ZStack {
                     
-                    //MARK: -  Rocket info row containing:
-                    // - image
-                    // - rocket name
-                    // - first flight
+                    Color.ui.lightGrayList
                     
-                    NavigationLink(destination: RocketDetailView(rocket: rocket)) {
-                        RocketRow(
-                            rocketName: rocket.rocketName,
-                            firstFlight: rocket.firstFlight)
+                    List(rockets) { rocket in
+                        
+                        //MARK: -  Rocket info row containing:
+                        // - image
+                        // - rocket name
+                        // - first flight
+                        
+                        NavigationLink(destination: RocketDetailView(rocket: rocket)) {
+                            RocketRow(
+                                rocketName: rocket.rocketName,
+                                firstFlight: rocket.firstFlight)
+                        }
                     }
+                    .navigationTitle("Rockets")
+                    
                 }
-                .navigationTitle("Rockets")
                 
-                if rocketsManager.isLoading {
-                    ProgressView()
-                }
+            case .loading:
+                ProgressView()
+                
+            default:
+                EmptyView()
             }
         }
         .task {
-            await rocketsManager.fetchRockets()
+            await vm.getRockets()
         }
+        .alert("Error", isPresented: $vm.hasError, presenting: vm.state) { detail in
+            
+            Button("Retry") {
+                
+                Task {
+                    await vm.getRockets()
+                }
+                
+            }
+            
+        } message: { detail in
+            
+            if case let .failed(error) = detail {
+                Text(error.localizedDescription)
+            }
+            
+        }
+        
     }
 }
 
