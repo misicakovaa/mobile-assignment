@@ -7,20 +7,26 @@
 
 import Foundation
 
+enum State<Value, Error> {
+    case na // not available
+    case loading
+    case success(data: Value)
+    case failed(error: Error)
+}
+
 @MainActor
 class RocketsViewModel: ObservableObject {
     
-    enum State {
-        case na // not available
-        case loading
-        case success(data: [Rocket])
-        case failed(error: Error)
+    @Published private(set) var state: State<[Rocket], ApiService.URLError>
+    @Published var hasError: Bool
+    
+    private let rocketsManager: RocketsManager
+    
+    init(apiService: ApiService) {
+        self.state = .na
+        self.hasError = false
+        self.rocketsManager = RocketsManager(apiService: apiService)
     }
-    
-    @Published private(set) var state: State = .na
-    @Published var hasError: Bool = false
-    
-    private let rocketsManager = RocketsManager()
     
     //MARK: - Get array with rockets
     func getRockets() async {
@@ -30,10 +36,10 @@ class RocketsViewModel: ObservableObject {
         do {
             let rockets = try await rocketsManager.fetchRockets()
             self.state = .success(data: rockets)
-            
         } catch {
-            self.state = .failed(error: error)
+            self.state = .failed(error: error as? ApiService.URLError ?? .failed)
             self.hasError = true
+            
         }
     }
 }

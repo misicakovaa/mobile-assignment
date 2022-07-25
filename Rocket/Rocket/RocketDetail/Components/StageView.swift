@@ -23,6 +23,7 @@ struct StageView: View {
             TitledSection(title: "\(stage) Stage") {
                 
                 VStack{
+                    
                     StageRow(
                         image: Image.ui.reusable,
                         text: reusable ? "reusable" : "not reusable")
@@ -38,6 +39,7 @@ struct StageView: View {
                     StageRow(
                         image: Image.ui.burn,
                         text: "\(burnTime) seconds burn time")
+                    
                 }.padding(.bottom)
             }
             .padding()

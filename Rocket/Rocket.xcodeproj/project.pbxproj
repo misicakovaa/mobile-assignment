@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		F515AEED2886C17D00A8007B /* RocketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515AEEC2886C17D00A8007B /* RocketRow.swift */; };
 		F515AEF02886C2ED00A8007B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515AEEF2886C2ED00A8007B /* StringExtension.swift */; };
+		F51F4D2C288EA09500F1B4F5 /* DeviceMotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F4D2B288EA09500F1B4F5 /* DeviceMotionViewModel.swift */; };
+		F51F4D2E288ED25800F1B4F5 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F4D2D288ED25800F1B4F5 /* DateFormatterExtension.swift */; };
+		F51F4D31288EF49D00F1B4F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F51F4D2F288EF49D00F1B4F5 /* Localizable.strings */; };
 		F580E547287D998E00281572 /* RocketLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E546287D998E00281572 /* RocketLaunchView.swift */; };
 		F580E54B287DB1AE00281572 /* DeviceMotionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54A287DB1AE00281572 /* DeviceMotionHandler.swift */; };
-		F580E54D287EC8E500281572 /* ParametersSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54C287EC8E500281572 /* ParametersSectionView.swift */; };
 		F580E551287EC9EA00281572 /* PhotosSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E550287EC9EA00281572 /* PhotosSectionView.swift */; };
 		F5B60F1B288A8A340011E168 /* RocketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B60F1A288A8A340011E168 /* RocketsViewModel.swift */; };
 		F5B60F1D288AA1ED0011E168 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B60F1C288AA1ED0011E168 /* ApiService.swift */; };
-		F5D0523E2885993F00A24021 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5D052402885993F00A24021 /* Localizable.strings */; };
 		F5DBA073287D74F3002B87D0 /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA072287D74F2002B87D0 /* ParameterView.swift */; };
 		F5DBA075287D77CB002B87D0 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA074287D77CB002B87D0 /* ColorExtension.swift */; };
 		F5DBA077287D7C55002B87D0 /* StageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA076287D7C55002B87D0 /* StageView.swift */; };
@@ -34,14 +35,15 @@
 /* Begin PBXFileReference section */
 		F515AEEC2886C17D00A8007B /* RocketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRow.swift; sourceTree = "<group>"; };
 		F515AEEF2886C2ED00A8007B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F51F4D2B288EA09500F1B4F5 /* DeviceMotionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionViewModel.swift; sourceTree = "<group>"; };
+		F51F4D2D288ED25800F1B4F5 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		F51F4D30288EF49D00F1B4F5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F51F4D32288EF4A800F1B4F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F580E546287D998E00281572 /* RocketLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchView.swift; sourceTree = "<group>"; };
 		F580E54A287DB1AE00281572 /* DeviceMotionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionHandler.swift; sourceTree = "<group>"; };
-		F580E54C287EC8E500281572 /* ParametersSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersSectionView.swift; sourceTree = "<group>"; };
 		F580E550287EC9EA00281572 /* PhotosSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosSectionView.swift; sourceTree = "<group>"; };
 		F5B60F1A288A8A340011E168 /* RocketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsViewModel.swift; sourceTree = "<group>"; };
 		F5B60F1C288AA1ED0011E168 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		F5D052412885999500A24021 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F5D052462885A51400A24021 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F5DBA072287D74F2002B87D0 /* ParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		F5DBA074287D77CB002B87D0 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		F5DBA076287D7C55002B87D0 /* StageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageView.swift; sourceTree = "<group>"; };
@@ -75,7 +77,6 @@
 				F5E7C28D2887F2350097715D /* TitledSection.swift */,
 				F5DBA076287D7C55002B87D0 /* StageView.swift */,
 				F5E7C2912887FDF60097715D /* StageRow.swift */,
-				F580E54C287EC8E500281572 /* ParametersSectionView.swift */,
 				F5DBA072287D74F2002B87D0 /* ParameterView.swift */,
 				F580E550287EC9EA00281572 /* PhotosSectionView.swift */,
 			);
@@ -86,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				F580E546287D998E00281572 /* RocketLaunchView.swift */,
+				F51F4D2B288EA09500F1B4F5 /* DeviceMotionViewModel.swift */,
 				F580E54A287DB1AE00281572 /* DeviceMotionHandler.swift */,
 			);
 			path = LaunchRocket;
@@ -107,6 +109,7 @@
 				F5E7C28F2887FBB10097715D /* ImageExtension.swift */,
 				F5DBA074287D77CB002B87D0 /* ColorExtension.swift */,
 				F515AEEF2886C2ED00A8007B /* StringExtension.swift */,
+				F51F4D2D288ED25800F1B4F5 /* DateFormatterExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -123,7 +126,7 @@
 		F5D0523B2885981300A24021 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				F5D052402885993F00A24021 /* Localizable.strings */,
+				F51F4D2F288EF49D00F1B4F5 /* Localizable.strings */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -238,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5EF80C6287C74430060FDC0 /* Preview Assets.xcassets in Resources */,
-				F5D0523E2885993F00A24021 /* Localizable.strings in Resources */,
+				F51F4D31288EF49D00F1B4F5 /* Localizable.strings in Resources */,
 				F5EF80C3287C74430060FDC0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,8 +255,10 @@
 			files = (
 				F5EF80D1287C7C950060FDC0 /* RocketsData.swift in Sources */,
 				F5DBA077287D7C55002B87D0 /* StageView.swift in Sources */,
+				F51F4D2E288ED25800F1B4F5 /* DateFormatterExtension.swift in Sources */,
 				F580E551287EC9EA00281572 /* PhotosSectionView.swift in Sources */,
 				F5EF80D3287C7DA30060FDC0 /* RocketsManager.swift in Sources */,
+				F51F4D2C288EA09500F1B4F5 /* DeviceMotionViewModel.swift in Sources */,
 				F580E547287D998E00281572 /* RocketLaunchView.swift in Sources */,
 				F580E54B287DB1AE00281572 /* DeviceMotionHandler.swift in Sources */,
 				F5EF80D5287CBE430060FDC0 /* RocketDetailView.swift in Sources */,
@@ -267,7 +272,6 @@
 				F5B60F1D288AA1ED0011E168 /* ApiService.swift in Sources */,
 				F5B60F1B288A8A340011E168 /* RocketsViewModel.swift in Sources */,
 				F5E7C2922887FDF60097715D /* StageRow.swift in Sources */,
-				F580E54D287EC8E500281572 /* ParametersSectionView.swift in Sources */,
 				F515AEED2886C17D00A8007B /* RocketRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +279,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F5D052402885993F00A24021 /* Localizable.strings */ = {
+		F51F4D2F288EF49D00F1B4F5 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F5D052412885999500A24021 /* cs */,
-				F5D052462885A51400A24021 /* en */,
+				F51F4D30288EF49D00F1B4F5 /* cs */,
+				F51F4D32288EF4A800F1B4F5 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

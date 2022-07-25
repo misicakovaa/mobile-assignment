@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreMotion
 
 struct RocketLaunchView: View {
     
@@ -13,12 +14,19 @@ struct RocketLaunchView: View {
     
     let rocketName: String
     
-    @ObservedObject var motionHandler = DeviceMotionHandler()
+    @StateObject var vm: DeviceMotionViewModel
+    
+    init(rocketName: String) {
+        self.rocketName = rocketName
+        
+        let motionManager = CMMotionManager()
+        _vm = StateObject(wrappedValue: DeviceMotionViewModel(motionManager: motionManager))
+    }
     
     var body: some View {
         VStack {
             // Launch rocket - change image & text
-            if motionHandler.deviceRotationChanged {
+            if vm.launchRocket {
                 Image.ui.flyingRocket
                     .offset(y: -UIScreen.main.bounds.height)
                     .transition(.scale.animation(.default.speed(0.1)))
@@ -30,19 +38,19 @@ struct RocketLaunchView: View {
                 Text("Move your phone up \nto launch the rocket")
             }
         }
-        .animation(.default, value: motionHandler.deviceRotationChanged)
+        .animation(.default, value: vm.launchRocket)
         .onAppear {
-            motionHandler.startGyro()
+            vm.startAnalyzing()
         }
         .onDisappear{
-            motionHandler.stopGyro()
+            vm.stopAnalyzing()
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: {
                     self.presentationMode.wrappedValue.dismiss()
-                    motionHandler.resetHandler()
+                    vm.stopAnalyzing()
                 }) {
                     HStack {
                         Image(systemName: "chevron.backward")

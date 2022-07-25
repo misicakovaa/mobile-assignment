@@ -9,17 +9,19 @@ import SwiftUI
 
 struct RocketsListView: View {
     
-    @StateObject private var vm = RocketsViewModel()
+    @StateObject private var vm: RocketsViewModel
+    
+    init() {
+        let apiService = ApiService(urlString: "https://api.spacexdata.com/v3/rockets")
+        _vm = StateObject(wrappedValue: RocketsViewModel(apiService: apiService))
+    }
     
     var body: some View {
         
         NavigationView {
-            
             switch vm.state {
             case .success(let rockets):
-                
                 ZStack {
-                    
                     Color.ui.lightGrayList
                     
                     List(rockets) { rocket in
@@ -36,7 +38,6 @@ struct RocketsListView: View {
                         }
                     }
                     .navigationTitle("Rockets")
-                    
                 }
                 
             case .loading:
@@ -49,24 +50,17 @@ struct RocketsListView: View {
         .task {
             await vm.getRockets()
         }
-        .alert("Error", isPresented: $vm.hasError, presenting: vm.state) { detail in
-            
+        .alert("Error", isPresented: $vm.hasError, presenting: vm.state, actions: { detail in
             Button("Retry") {
-                
                 Task {
                     await vm.getRockets()
                 }
-                
             }
-            
-        } message: { detail in
-            
+        }, message: { detail in
             if case let .failed(error) = detail {
                 Text(error.localizedDescription)
             }
-            
-        }
-        
+        })
     }
 }
 

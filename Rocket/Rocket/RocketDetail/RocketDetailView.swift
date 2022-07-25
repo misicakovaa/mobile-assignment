@@ -26,11 +26,8 @@ struct RocketDetailView: View {
             
             TitledSection(title: "Parameters") {
                 
-                ParametersSectionView(
-                    height: rocket.height.meters,
-                    diameter: rocket.diameter.meters,
-                    mass: rocket.mass.kg)
-                .padding(.bottom)
+                parametersSectionView
+                    .padding(.bottom)
             }
             
             //MARK: - First Stage section
@@ -75,6 +72,25 @@ struct RocketDetailView: View {
                         .fontWeight(.bold)
                 }
             }
+        }
+    }
+    
+    var parametersSectionView: some View {
+        HStack {
+            ParameterView(
+                name: "height", number: Int(rocket.height.meters), unit: "m")
+            .padding(.leading)
+            
+            Spacer()
+            
+            ParameterView(
+                name: "diameter", number: Int(rocket.diameter.meters), unit: "m")
+            
+            Spacer()
+            
+            ParameterView(
+                name: "mass", number: rocket.mass.kg/1000, unit: "t")
+            .padding(.trailing)
         }
     }
 }
