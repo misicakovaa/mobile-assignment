@@ -12,15 +12,7 @@ struct PhotosSectionView: View {
     let images: [String]
     
     var body: some View {
-        VStack {
-            // Photos title
-            HStack {
-                Text("Photos")
-                    .font(.headline)
-                    .padding(.leading)
-                
-                Spacer()
-            }
+        VStack(alignment: .leading) {
             
             // Images
             if let safeImages = images {

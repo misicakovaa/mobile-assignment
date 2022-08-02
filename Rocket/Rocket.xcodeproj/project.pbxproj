@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F515AEED2886C17D00A8007B /* RocketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515AEEC2886C17D00A8007B /* RocketRow.swift */; };
+		F515AEF02886C2ED00A8007B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515AEEF2886C2ED00A8007B /* StringExtension.swift */; };
+		F51F4D2C288EA09500F1B4F5 /* DeviceMotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F4D2B288EA09500F1B4F5 /* DeviceMotionViewModel.swift */; };
+		F51F4D2E288ED25800F1B4F5 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F4D2D288ED25800F1B4F5 /* DateFormatterExtension.swift */; };
+		F51F4D31288EF49D00F1B4F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F51F4D2F288EF49D00F1B4F5 /* Localizable.strings */; };
 		F580E547287D998E00281572 /* RocketLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E546287D998E00281572 /* RocketLaunchView.swift */; };
 		F580E54B287DB1AE00281572 /* DeviceMotionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54A287DB1AE00281572 /* DeviceMotionHandler.swift */; };
-		F580E54D287EC8E500281572 /* ParametersSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54C287EC8E500281572 /* ParametersSectionView.swift */; };
-		F580E54F287EC99F00281572 /* OverviewSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E54E287EC99F00281572 /* OverviewSectionView.swift */; };
 		F580E551287EC9EA00281572 /* PhotosSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580E550287EC9EA00281572 /* PhotosSectionView.swift */; };
+		F5B60F1B288A8A340011E168 /* RocketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B60F1A288A8A340011E168 /* RocketsViewModel.swift */; };
+		F5B60F1D288AA1ED0011E168 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B60F1C288AA1ED0011E168 /* ApiService.swift */; };
 		F5DBA073287D74F3002B87D0 /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA072287D74F2002B87D0 /* ParameterView.swift */; };
-		F5DBA075287D77CB002B87D0 /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA074287D77CB002B87D0 /* ColorData.swift */; };
+		F5DBA075287D77CB002B87D0 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA074287D77CB002B87D0 /* ColorExtension.swift */; };
 		F5DBA077287D7C55002B87D0 /* StageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBA076287D7C55002B87D0 /* StageView.swift */; };
+		F5E7C28E2887F2350097715D /* TitledSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7C28D2887F2350097715D /* TitledSection.swift */; };
+		F5E7C2902887FBB10097715D /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7C28F2887FBB10097715D /* ImageExtension.swift */; };
+		F5E7C2922887FDF60097715D /* StageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7C2912887FDF60097715D /* StageRow.swift */; };
 		F5EF80BF287C743E0060FDC0 /* RocketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EF80BE287C743E0060FDC0 /* RocketApp.swift */; };
 		F5EF80C1287C743E0060FDC0 /* RocketsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EF80C0287C743E0060FDC0 /* RocketsListView.swift */; };
 		F5EF80C3287C74430060FDC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5EF80C2287C74430060FDC0 /* Assets.xcassets */; };
@@ -25,14 +33,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F515AEEC2886C17D00A8007B /* RocketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRow.swift; sourceTree = "<group>"; };
+		F515AEEF2886C2ED00A8007B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F51F4D2B288EA09500F1B4F5 /* DeviceMotionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionViewModel.swift; sourceTree = "<group>"; };
+		F51F4D2D288ED25800F1B4F5 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		F51F4D30288EF49D00F1B4F5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F51F4D32288EF4A800F1B4F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F580E546287D998E00281572 /* RocketLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchView.swift; sourceTree = "<group>"; };
 		F580E54A287DB1AE00281572 /* DeviceMotionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionHandler.swift; sourceTree = "<group>"; };
-		F580E54C287EC8E500281572 /* ParametersSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersSectionView.swift; sourceTree = "<group>"; };
-		F580E54E287EC99F00281572 /* OverviewSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewSectionView.swift; sourceTree = "<group>"; };
 		F580E550287EC9EA00281572 /* PhotosSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosSectionView.swift; sourceTree = "<group>"; };
+		F5B60F1A288A8A340011E168 /* RocketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsViewModel.swift; sourceTree = "<group>"; };
+		F5B60F1C288AA1ED0011E168 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		F5DBA072287D74F2002B87D0 /* ParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
-		F5DBA074287D77CB002B87D0 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
+		F5DBA074287D77CB002B87D0 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		F5DBA076287D7C55002B87D0 /* StageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageView.swift; sourceTree = "<group>"; };
+		F5E7C28D2887F2350097715D /* TitledSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledSection.swift; sourceTree = "<group>"; };
+		F5E7C28F2887FBB10097715D /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		F5E7C2912887FDF60097715D /* StageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageRow.swift; sourceTree = "<group>"; };
 		F5EF80BB287C743E0060FDC0 /* Rocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5EF80BE287C743E0060FDC0 /* RocketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketApp.swift; sourceTree = "<group>"; };
 		F5EF80C0287C743E0060FDC0 /* RocketsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListView.swift; sourceTree = "<group>"; };
@@ -54,16 +71,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F580E552287ECA5500281572 /* RocketDetailSubViews */ = {
+		F515AEE92886BF9400A8007B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F580E550287EC9EA00281572 /* PhotosSectionView.swift */,
-				F580E54E287EC99F00281572 /* OverviewSectionView.swift */,
-				F580E54C287EC8E500281572 /* ParametersSectionView.swift */,
-				F5DBA072287D74F2002B87D0 /* ParameterView.swift */,
+				F5E7C28D2887F2350097715D /* TitledSection.swift */,
 				F5DBA076287D7C55002B87D0 /* StageView.swift */,
+				F5E7C2912887FDF60097715D /* StageRow.swift */,
+				F5DBA072287D74F2002B87D0 /* ParameterView.swift */,
+				F580E550287EC9EA00281572 /* PhotosSectionView.swift */,
 			);
-			path = RocketDetailSubViews;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F515AEEA2886BFB800A8007B /* LaunchRocket */ = {
+			isa = PBXGroup;
+			children = (
+				F580E546287D998E00281572 /* RocketLaunchView.swift */,
+				F51F4D2B288EA09500F1B4F5 /* DeviceMotionViewModel.swift */,
+				F580E54A287DB1AE00281572 /* DeviceMotionHandler.swift */,
+			);
+			path = LaunchRocket;
+			sourceTree = "<group>";
+		};
+		F515AEEB2886C05B00A8007B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F5EF80D2287C7DA30060FDC0 /* RocketsManager.swift */,
+				F5B60F1C288AA1ED0011E168 /* ApiService.swift */,
+				F5EF80D0287C7C950060FDC0 /* RocketsData.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F515AEEE2886C2D800A8007B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5E7C28F2887FBB10097715D /* ImageExtension.swift */,
+				F5DBA074287D77CB002B87D0 /* ColorExtension.swift */,
+				F515AEEF2886C2ED00A8007B /* StringExtension.swift */,
+				F51F4D2D288ED25800F1B4F5 /* DateFormatterExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F580E552287ECA5500281572 /* RocketDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F5EF80D4287CBE430060FDC0 /* RocketDetailView.swift */,
+				F515AEE92886BF9400A8007B /* Components */,
+			);
+			path = RocketDetail;
+			sourceTree = "<group>";
+		};
+		F5D0523B2885981300A24021 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				F51F4D2F288EF49D00F1B4F5 /* Localizable.strings */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		F5EF80B2287C743E0060FDC0 = {
@@ -86,9 +151,12 @@
 			isa = PBXGroup;
 			children = (
 				F5EF80BE287C743E0060FDC0 /* RocketApp.swift */,
-				F5EF80CC287C7C220060FDC0 /* Views */,
-				F5EF80CF287C7C630060FDC0 /* ViewModels */,
-				F5EF80CE287C7C4A0060FDC0 /* Models */,
+				F5EF80CC287C7C220060FDC0 /* RocketsList */,
+				F580E552287ECA5500281572 /* RocketDetail */,
+				F515AEEA2886BFB800A8007B /* LaunchRocket */,
+				F515AEEB2886C05B00A8007B /* Networking */,
+				F5D0523B2885981300A24021 /* Supporting */,
+				F515AEEE2886C2D800A8007B /* Extensions */,
 				F5EF80C2287C74430060FDC0 /* Assets.xcassets */,
 				F5EF80C4287C74430060FDC0 /* Preview Content */,
 			);
@@ -103,33 +171,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		F5EF80CC287C7C220060FDC0 /* Views */ = {
+		F5EF80CC287C7C220060FDC0 /* RocketsList */ = {
 			isa = PBXGroup;
 			children = (
 				F5EF80C0287C743E0060FDC0 /* RocketsListView.swift */,
-				F5EF80D4287CBE430060FDC0 /* RocketDetailView.swift */,
-				F580E552287ECA5500281572 /* RocketDetailSubViews */,
-				F580E546287D998E00281572 /* RocketLaunchView.swift */,
+				F515AEEC2886C17D00A8007B /* RocketRow.swift */,
+				F5B60F1A288A8A340011E168 /* RocketsViewModel.swift */,
 			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		F5EF80CE287C7C4A0060FDC0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				F5EF80D0287C7C950060FDC0 /* RocketsData.swift */,
-				F5DBA074287D77CB002B87D0 /* ColorData.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		F5EF80CF287C7C630060FDC0 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				F5EF80D2287C7DA30060FDC0 /* RocketsManager.swift */,
-				F580E54A287DB1AE00281572 /* DeviceMotionHandler.swift */,
-			);
-			path = ViewModels;
+			path = RocketsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +223,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = F5EF80B2287C743E0060FDC0;
 			productRefGroup = F5EF80BC287C743E0060FDC0 /* Products */;
@@ -191,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5EF80C6287C74430060FDC0 /* Preview Assets.xcassets in Resources */,
+				F51F4D31288EF49D00F1B4F5 /* Localizable.strings in Resources */,
 				F5EF80C3287C74430060FDC0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,27 +255,47 @@
 			files = (
 				F5EF80D1287C7C950060FDC0 /* RocketsData.swift in Sources */,
 				F5DBA077287D7C55002B87D0 /* StageView.swift in Sources */,
+				F51F4D2E288ED25800F1B4F5 /* DateFormatterExtension.swift in Sources */,
 				F580E551287EC9EA00281572 /* PhotosSectionView.swift in Sources */,
 				F5EF80D3287C7DA30060FDC0 /* RocketsManager.swift in Sources */,
+				F51F4D2C288EA09500F1B4F5 /* DeviceMotionViewModel.swift in Sources */,
 				F580E547287D998E00281572 /* RocketLaunchView.swift in Sources */,
 				F580E54B287DB1AE00281572 /* DeviceMotionHandler.swift in Sources */,
 				F5EF80D5287CBE430060FDC0 /* RocketDetailView.swift in Sources */,
-				F5DBA075287D77CB002B87D0 /* ColorData.swift in Sources */,
+				F5DBA075287D77CB002B87D0 /* ColorExtension.swift in Sources */,
 				F5EF80C1287C743E0060FDC0 /* RocketsListView.swift in Sources */,
+				F5E7C2902887FBB10097715D /* ImageExtension.swift in Sources */,
 				F5DBA073287D74F3002B87D0 /* ParameterView.swift in Sources */,
+				F5E7C28E2887F2350097715D /* TitledSection.swift in Sources */,
+				F515AEF02886C2ED00A8007B /* StringExtension.swift in Sources */,
 				F5EF80BF287C743E0060FDC0 /* RocketApp.swift in Sources */,
-				F580E54D287EC8E500281572 /* ParametersSectionView.swift in Sources */,
-				F580E54F287EC99F00281572 /* OverviewSectionView.swift in Sources */,
+				F5B60F1D288AA1ED0011E168 /* ApiService.swift in Sources */,
+				F5B60F1B288A8A340011E168 /* RocketsViewModel.swift in Sources */,
+				F5E7C2922887FDF60097715D /* StageRow.swift in Sources */,
+				F515AEED2886C17D00A8007B /* RocketRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F51F4D2F288EF49D00F1B4F5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F51F4D30288EF49D00F1B4F5 /* cs */,
+				F51F4D32288EF4A800F1B4F5 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F5EF80C7287C74430060FDC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -285,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
